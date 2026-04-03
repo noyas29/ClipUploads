@@ -1,0 +1,5 @@
+Flask
+cloudinary
+requests
+python-dotenv
+gunicorn
