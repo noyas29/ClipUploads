@@ -20,7 +20,7 @@ def index():
 @app.route("/upload", methods=["POST"])
 def upload():
     title = request.form["title"]
-    file = request.files["video"]
+    file = request.files["file"]
 
     result = cloudinary.uploader.upload(
         file,
