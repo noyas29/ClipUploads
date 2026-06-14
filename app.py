@@ -4,7 +4,11 @@ import cloudinary.uploader
 import requests
 import os
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="main",   # index.html を探す場所
+    static_folder="main"      # app.css, app.js を配信する場所
+)
 
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
