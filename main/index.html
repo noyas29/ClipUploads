@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="app.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
     <title>動画アップロード</title>
 </head>
     <body>
@@ -52,6 +52,6 @@
 
         </form>
     </body>
-    <script src="app.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
     <p>© 2026 Create By Noyas</p>
 </html>
