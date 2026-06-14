@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="app.css">
+    <title>動画アップロード</title>
+</head>
+    <body>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+
+            <h2>動画アップロード</h2>
+
+            <input
+                type="text"
+                name="title"
+                class="title-input"
+                placeholder="動画タイトル"
+                required
+            >
+
+            <div class="drop-area" id="dropArea">
+                <input
+                    type="file"
+                    name="file"
+                    id="fileInput"
+                    accept="video/*"
+                    required
+                    hidden
+                >
+
+                <div class="drop-content">
+                    <div class="upload-icon">📹</div>
+
+                    <p class="main-text">
+                        ファイルをドラッグ＆ドロップ
+                    </p>
+
+                    <p class="sub-text">
+                        またはクリックして選択
+                    </p>
+
+                    <p class="file-name" id="fileName">
+                        ファイルが選択されていません
+                    </p>
+                </div>
+            </div>
+
+            <button type="submit" class="upload-btn">
+                アップロード
+            </button>
+
+        </form>
+    </body>
+    <script src="app.js"></script>
+    <p>© 2026 Create By Noyas</p>
+</html>
